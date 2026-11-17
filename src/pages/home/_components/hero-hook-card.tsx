@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { ArrowRight, Calendar } from "lucide-react";
-import { BRAND, HERO_STATS } from "@/data/weddings";
+import { assetUrl, BRAND, HERO_STATS } from "@/data/weddings";
 import { PostActions, PostHeader } from "./post-actions";
 
 interface HeroHookCardProps {
@@ -15,7 +15,7 @@ export function HeroHookCard({ onBookClick }: HeroHookCardProps) {
 
       <div className="relative overflow-hidden" style={{ aspectRatio: "9 / 16" }}>
         <img
-          src="/images/udaipur-mandap.jpg"
+          src={assetUrl("/images/udaipur-mandap.jpg")}
           alt="Luxury destination wedding in India"
           className="w-full h-full object-cover"
         />

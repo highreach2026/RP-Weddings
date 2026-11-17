@@ -1,4 +1,4 @@
-import { BRAND } from "@/data/weddings";
+import { assetUrl, BRAND } from "@/data/weddings";
 import { PostActions, PostHeader } from "./post-actions";
 
 interface PackagesCardProps {
@@ -12,7 +12,7 @@ export function PackagesCard({ onEnquire }: PackagesCardProps) {
 
       <div className="relative bg-black overflow-hidden" style={{ aspectRatio: "4 / 5" }}>
         <img
-          src="/images/reception-gala.jpg"
+          src={assetUrl("/images/reception-gala.jpg")}
           alt="Destination Wedding Palace Venue"
           className="absolute inset-0 w-full h-full object-cover"
         />

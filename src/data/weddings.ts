@@ -82,13 +82,16 @@ export interface BlogArticle {
   }[];
 }
 
+const BASE = import.meta.env.BASE_URL;
+export const assetUrl = (path: string) => `${BASE}${path.replace(/^\//, "")}`;
+
 export const BRAND = {
   name: "Weddings by Rubina Patel",
   shortName: "RP Weddings",
   monogram: "RP",
   handle: "WeddingsByRubinaPatel",
   tagline: "Luxury Destination Wedding Planners",
-  logo: "/logo.svg",
+  logo: assetUrl("/logo.svg"),
   since: "Since 2003",
   email: "concierge@rpweddings.in",
   phoneDisplay: "+91 98290 00000",
@@ -101,7 +104,7 @@ export const HIGHLIGHTS: HighlightItem[] = [
   {
     id: "about-us",
     label: "About Us",
-    iconUrl: "/logo.svg",
+    iconUrl: assetUrl("/logo.svg"),
     iconText: "RP\nWeddings",
     iconColor: "oklch(0.45 0.09 70)",
     bgColor: "#f8f0e3",
@@ -120,23 +123,23 @@ export const HIGHLIGHTS: HighlightItem[] = [
   {
     id: "our-couples",
     label: "Our Couples",
-    iconUrl: "/images/jaipur-couple.jpg",
+    iconUrl: assetUrl("/images/jaipur-couple.jpg"),
     bgColor: "#fdf0f3",
     gradient: "from-pink-400 to-red-400",
     items: [
       {
         type: "image",
-        url: "/images/jaipur-couple.jpg",
+        url: assetUrl("/images/jaipur-couple.jpg"),
         caption: "A royal sandstone corridor at golden hour — Jaipur",
       },
       {
         type: "image",
-        url: "/images/udaipur-mandap.jpg",
+        url: assetUrl("/images/udaipur-mandap.jpg"),
         caption: "Sunset pheras overlooking Lake Pichola — Udaipur",
       },
       {
         type: "image",
-        url: "/images/reception-gala.jpg",
+        url: assetUrl("/images/reception-gala.jpg"),
         caption: "Candlelit black-tie dinner under ancient palace arches",
       },
     ],
@@ -154,18 +157,18 @@ export const HIGHLIGHTS: HighlightItem[] = [
   {
     id: "udaipur",
     label: "Udaipur",
-    iconUrl: "/images/udaipur-mandap.jpg",
+    iconUrl: assetUrl("/images/udaipur-mandap.jpg"),
     bgColor: "#fdf0ed",
     gradient: "from-rose-400 to-orange-400",
     items: [
       {
         type: "image",
-        url: "/images/udaipur-mandap.jpg",
+        url: assetUrl("/images/udaipur-mandap.jpg"),
         caption: "Lakeside marigold mandap facing heritage palaces in Udaipur",
       },
       {
         type: "image",
-        url: "/images/haldi-courtyard.jpg",
+        url: assetUrl("/images/haldi-courtyard.jpg"),
         caption: "Sun-drenched sandstone haveli courtyard for Haldi & Mehendi",
       },
     ],
@@ -173,18 +176,18 @@ export const HIGHLIGHTS: HighlightItem[] = [
   {
     id: "jaipur",
     label: "Jaipur",
-    iconUrl: "/images/jaipur-sangeet.jpg",
+    iconUrl: assetUrl("/images/jaipur-sangeet.jpg"),
     bgColor: "#faf2e8",
     gradient: "from-amber-400 to-orange-500",
     items: [
       {
         type: "image",
-        url: "/images/jaipur-sangeet.jpg",
+        url: assetUrl("/images/jaipur-sangeet.jpg"),
         caption: "Chandeliers, fairy lights & courtyard grandeur in the Pink City",
       },
       {
         type: "image",
-        url: "/images/reception-gala.jpg",
+        url: assetUrl("/images/reception-gala.jpg"),
         caption: "Royal palace lawn reception in Jaipur",
       },
     ],
@@ -192,13 +195,13 @@ export const HIGHLIGHTS: HighlightItem[] = [
   {
     id: "goa",
     label: "Goa",
-    iconUrl: "/images/goa-beach.jpg",
+    iconUrl: assetUrl("/images/goa-beach.jpg"),
     bgColor: "#eef6fa",
     gradient: "from-sky-400 to-amber-300",
     items: [
       {
         type: "image",
-        url: "/images/goa-beach.jpg",
+        url: assetUrl("/images/goa-beach.jpg"),
         caption: "Champagne coastal pheras as the Arabian Sea turns gold",
       },
     ],
@@ -206,7 +209,7 @@ export const HIGHLIGHTS: HighlightItem[] = [
   {
     id: "philosophy",
     label: "Philosophy",
-    iconUrl: "/images/reception-gala.jpg",
+    iconUrl: assetUrl("/images/reception-gala.jpg"),
     bgColor: "#f6f1ea",
     gradient: "from-amber-500 to-yellow-600",
     items: [
@@ -237,7 +240,7 @@ export const TESTIMONIAL_SLIDES: TestimonialSlide[] = [
     venue: "Lake Pichola Palace, Udaipur",
     quote:
       "Planning from London felt effortless. RP Weddings handled every hotel negotiation, guest arrival, and sunset mandap detail with extraordinary calm.",
-    image: "/images/udaipur-mandap.jpg",
+    image: assetUrl("/images/udaipur-mandap.jpg"),
   },
   {
     id: "t2",
@@ -246,7 +249,7 @@ export const TESTIMONIAL_SLIDES: TestimonialSlide[] = [
     venue: "Heritage Fort Courtyard, Jaipur",
     quote:
       "Our guests are still talking about the candlelit Sangeet courtyard. Not once did we feel stressed — every timeline ran like clockwork.",
-    image: "/images/jaipur-sangeet.jpg",
+    image: assetUrl("/images/jaipur-sangeet.jpg"),
   },
   {
     id: "t3",
@@ -255,7 +258,7 @@ export const TESTIMONIAL_SLIDES: TestimonialSlide[] = [
     venue: "South Goa Coastal Resort",
     quote:
       "From the breezy linen beach vows to the farewell brunch, RP Weddings translated our vision into pure magic while staying completely transparent on budget.",
-    image: "/images/goa-beach.jpg",
+    image: assetUrl("/images/goa-beach.jpg"),
   },
 ];
 
@@ -271,12 +274,12 @@ export const FEED_POSTS: WeddingPost[] = [
     tags: ["Udaipur", "Palace Wedding", "200 Guests"],
     images: [
       {
-        url: "/images/udaipur-mandap.jpg",
+        url: assetUrl("/images/udaipur-mandap.jpg"),
         alt: "Sunset lakeside mandap in Udaipur",
         caption: "Sunset Pheras by Lake Pichola",
       },
       {
-        url: "/images/haldi-courtyard.jpg",
+        url: assetUrl("/images/haldi-courtyard.jpg"),
         alt: "Haldi courtyard in Udaipur",
         caption: "Morning Marigold Haldi Courtyard",
       },
@@ -293,17 +296,17 @@ export const FEED_POSTS: WeddingPost[] = [
     tags: ["Jaipur", "Sangeet", "Royal Fort"],
     images: [
       {
-        url: "/images/jaipur-sangeet.jpg",
+        url: assetUrl("/images/jaipur-sangeet.jpg"),
         alt: "Royal Jaipur courtyard Sangeet night",
         caption: "Starlit Courtyard Sangeet",
       },
       {
-        url: "/images/jaipur-couple.jpg",
+        url: assetUrl("/images/jaipur-couple.jpg"),
         alt: "Bride and groom in Jaipur palace corridor",
         caption: "Golden Hour Portraits in Sandstone Arches",
       },
       {
-        url: "/images/reception-gala.jpg",
+        url: assetUrl("/images/reception-gala.jpg"),
         alt: "Candlelit reception dinner",
         caption: "Black-Tie Palace Garden Reception",
       },
@@ -320,12 +323,12 @@ export const FEED_POSTS: WeddingPost[] = [
     tags: ["Goa", "Beach Wedding", "120 Guests"],
     images: [
       {
-        url: "/images/goa-beach.jpg",
+        url: assetUrl("/images/goa-beach.jpg"),
         alt: "Goa sunset beach wedding mandap",
         caption: "Twilight Mandap Overlooking the Arabian Sea",
       },
       {
-        url: "/images/reception-gala.jpg",
+        url: assetUrl("/images/reception-gala.jpg"),
         alt: "Evening candlelit banquet",
         caption: "Lantern-Lit Lawn Gala",
       },
@@ -342,12 +345,12 @@ export const FEED_POSTS: WeddingPost[] = [
     tags: ["Haldi", "Mehendi", "Haveli"],
     images: [
       {
-        url: "/images/haldi-courtyard.jpg",
+        url: assetUrl("/images/haldi-courtyard.jpg"),
         alt: "Sunlit Haldi and Mehendi courtyard",
         caption: "Haveli Courtyard Haldi & Mehendi",
       },
       {
-        url: "/images/udaipur-mandap.jpg",
+        url: assetUrl("/images/udaipur-mandap.jpg"),
         alt: "Evening mandap transition",
         caption: "Dusk Pheras Transition",
       },
@@ -362,7 +365,7 @@ export const JOURNEY_SLIDES: JourneySlide[] = [
     title: "One Conversation That Maps Everything",
     description:
       "We begin by listening to your guest count, dates, aesthetic sensibilities, and family traditions — then match you with 3 vetted heritage properties that truly fit.",
-    image: "/images/jaipur-couple.jpg",
+    image: assetUrl("/images/jaipur-couple.jpg"),
     highlight: "Months 12–15 Before",
   },
   {
@@ -371,7 +374,7 @@ export const JOURNEY_SLIDES: JourneySlide[] = [
     title: "Transparent Room Blocks & Zero Hidden Clauses",
     description:
       "Our long-standing relationships with palace hotels in Udaipur, Jaipur, and Goa secure preferred buyout terms, corkage flexibility, and crystal-clear budgets.",
-    image: "/images/udaipur-mandap.jpg",
+    image: assetUrl("/images/udaipur-mandap.jpg"),
     highlight: "100% Open-Book Pricing",
   },
   {
@@ -380,7 +383,7 @@ export const JOURNEY_SLIDES: JourneySlide[] = [
     title: "Bespoke Moodboards, Florals & Culinary Craft",
     description:
       "From architectural mandap sketches to regional tasting menus and lighting cues, every celebration feels tailored rather than templated.",
-    image: "/images/jaipur-sangeet.jpg",
+    image: assetUrl("/images/jaipur-sangeet.jpg"),
     highlight: "Custom 3D & Floral Direction",
   },
   {
@@ -389,7 +392,7 @@ export const JOURNEY_SLIDES: JourneySlide[] = [
     title: "Seamless Hospitality For Every Single Guest",
     description:
       "Dedicated airport concierge, WhatsApp guest desks, artist logistics, and minute-by-minute run sheets so your families simply soak in the joy.",
-    image: "/images/reception-gala.jpg",
+    image: assetUrl("/images/reception-gala.jpg"),
     highlight: "Dedicated 12+ Member Ground Team",
   },
 ];
@@ -399,25 +402,25 @@ export const DIFFERENCE_SLIDES: DifferenceSlide[] = [
     eyebrow: "The RP Weddings Standard",
     title: "Only 8 Weddings a Year",
     body: "We never overbook our calendar. Every couple works directly with our senior planners from day one through the final farewell brunch.",
-    image: "/images/jaipur-couple.jpg",
+    image: assetUrl("/images/jaipur-couple.jpg"),
   },
   {
     eyebrow: "Financial Clarity",
     title: "Zero Vendor Commissions Hidden From You",
     body: "Line-by-line itemized budgets, direct vendor transparency, and clear milestone schedules built especially for NRI & overseas families.",
-    image: "/images/haldi-courtyard.jpg",
+    image: assetUrl("/images/haldi-courtyard.jpg"),
   },
   {
     eyebrow: "Built For Overseas Families",
     title: "Time-Zone Synced Planning",
     body: "Whether you are in London, New York, Dubai, or Singapore, we align call hours and digital previews to your schedule.",
-    image: "/images/goa-beach.jpg",
+    image: assetUrl("/images/goa-beach.jpg"),
   },
   {
     eyebrow: "Begin Your Celebration",
     title: "Let's Design Your Wedding Weekend",
     body: "Check venue availability for the 2026–2027 wedding season and receive a personalized destination brief.",
-    image: "/images/reception-gala.jpg",
+    image: assetUrl("/images/reception-gala.jpg"),
     isFinalCta: true,
   },
 ];
@@ -454,7 +457,7 @@ export const BLOG_ARTICLES: BlogArticle[] = [
     title: "The Real Cost of a Destination Wedding in Udaipur",
     excerpt:
       "A transparent breakdown of palace buyouts, décor production, hospitality, and smart ways to allocate your wedding investment.",
-    cover: "/images/udaipur-mandap.jpg",
+    cover: assetUrl("/images/udaipur-mandap.jpg"),
     sections: [
       {
         heading: "1. Venue Buyout & Hospitality (45–55%)",
@@ -478,7 +481,7 @@ export const BLOG_ARTICLES: BlogArticle[] = [
     title: "Udaipur vs. Jaipur vs. Goa: Choosing Your Ideal Setting",
     excerpt:
       "Compare palace capacities, airport connectivity, weather windows, and celebratory mood across India's top three luxury wedding destinations.",
-    cover: "/images/jaipur-sangeet.jpg",
+    cover: assetUrl("/images/jaipur-sangeet.jpg"),
     sections: [
       {
         heading: "Udaipur — Romantic Lakeside Serenity",
