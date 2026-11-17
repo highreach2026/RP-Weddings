@@ -106,8 +106,8 @@ export const HIGHLIGHTS: HighlightItem[] = [
     label: "About Us",
     iconUrl: assetUrl("/logo.svg"),
     iconText: "RP\nWeddings",
-    iconColor: "oklch(0.45 0.09 70)",
-    bgColor: "#f8f0e3",
+    iconColor: "#f6f3e4",
+    bgColor: "#811419",
     gradient: "from-amber-400 to-rose-500",
     items: [
       {
@@ -148,8 +148,8 @@ export const HIGHLIGHTS: HighlightItem[] = [
     id: "budget",
     label: "Budget",
     iconText: "₹\nBudget",
-    iconColor: "oklch(0.42 0.1 155)",
-    bgColor: "#edf7f3",
+    iconColor: "#f6f3e4",
+    bgColor: "#680f14",
     gradient: "from-emerald-400 to-teal-500",
     isBudgetTrigger: true,
     items: [],

@@ -31,43 +31,43 @@
 
 :root {
   --radius: 0.25rem;
-  --background: oklch(98.5% 0.004 80);
-  --foreground: oklch(13% 0 0);
-  --card: oklch(98.5% 0.004 80);
-  --card-foreground: oklch(13% 0 0);
-  --popover: oklch(98.5% 0.004 80);
-  --popover-foreground: oklch(13% 0 0);
-  --primary: oklch(62% 0.09 70);
-  --primary-foreground: oklch(98% 0.005 85);
-  --secondary: oklch(96% 0 0);
-  --secondary-foreground: oklch(13% 0 0);
-  --muted: oklch(96% 0 0);
-  --muted-foreground: oklch(48% 0 0);
-  --accent: oklch(62% 0.09 70);
-  --accent-foreground: oklch(100% 0 0);
-  --border: oklch(90% 0 0);
-  --input: oklch(90% 0 0);
-  --ring: oklch(62% 0.09 70);
+  --background: #811419;
+  --foreground: #f6f3e4;
+  --card: #811419;
+  --card-foreground: #f6f3e4;
+  --popover: #811419;
+  --popover-foreground: #f6f3e4;
+  --primary: #f6f3e4;
+  --primary-foreground: #811419;
+  --secondary: #680f14;
+  --secondary-foreground: #f6f3e4;
+  --muted: #680f14;
+  --muted-foreground: #e5dec9;
+  --accent: #f6f3e4;
+  --accent-foreground: #811419;
+  --border: rgba(246, 243, 228, 0.22);
+  --input: rgba(246, 243, 228, 0.25);
+  --ring: #f6f3e4;
 }
 
 .dark {
-  --background: oklch(12% 0.01 60);
-  --foreground: oklch(95% 0.01 80);
-  --card: oklch(17% 0.01 60);
-  --card-foreground: oklch(95% 0.01 80);
-  --popover: oklch(17% 0.01 60);
-  --popover-foreground: oklch(95% 0.01 80);
-  --primary: oklch(72% 0.1 75);
-  --primary-foreground: oklch(12% 0.01 60);
-  --secondary: oklch(22% 0.02 65);
-  --secondary-foreground: oklch(95% 0.01 80);
-  --muted: oklch(22% 0.02 65);
-  --muted-foreground: oklch(65% 0.03 75);
-  --accent: oklch(72% 0.1 75);
-  --accent-foreground: oklch(12% 0.01 60);
-  --border: oklch(100% 0 0 / 0.1);
-  --input: oklch(100% 0 0 / 0.15);
-  --ring: oklch(72% 0.1 75);
+  --background: #5c0d11;
+  --foreground: #f6f3e4;
+  --card: #680f14;
+  --card-foreground: #f6f3e4;
+  --popover: #680f14;
+  --popover-foreground: #f6f3e4;
+  --primary: #f6f3e4;
+  --primary-foreground: #5c0d11;
+  --secondary: #4a0a0d;
+  --secondary-foreground: #f6f3e4;
+  --muted: #4a0a0d;
+  --muted-foreground: #dfd7c0;
+  --accent: #f6f3e4;
+  --accent-foreground: #5c0d11;
+  --border: rgba(246, 243, 228, 0.18);
+  --input: rgba(246, 243, 228, 0.22);
+  --ring: #f6f3e4;
 }
 
 @layer base {
